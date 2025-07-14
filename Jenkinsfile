@@ -2,9 +2,9 @@ pipeline {
   agent any
 
   stages {
-    stage('Run Node Docker') {
+    stage('Start Node Container') {
       steps {
-        sh 'docker run  node:16-alpine node --version'
+        sh 'docker run -d --name my-node node:16-alpine tail -f /dev/null'
       }
     }
   }
