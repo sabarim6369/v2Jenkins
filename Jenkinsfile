@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Run Node Docker') {
       steps {
-        sh 'docker run --rm node:16-alpine node --version'
+        sh 'docker run  node:16-alpine node --version'
       }
     }
   }
